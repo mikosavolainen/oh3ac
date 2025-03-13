@@ -117,3 +117,139 @@ h1 {
         height: 700px;
     }
 }
+
+
+/* styles.css */
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .menu a:hover {
+    color: #f1f1f1;
+  }
+  
+  .menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .menu {padding-top: 15px;}
+    .menu a {font-size: 18px;}
+  }
+
+/* Yleiset tyylit */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.sdr {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.sdr h5 {
+    color: #0066cc;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.sdr p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.sdr ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sdr ul li {
+    margin-bottom: 10px;
+}
+
+.sdr ul li a {
+    text-decoration: none;
+    color: #0066cc;
+    transition: color 0.3s ease;
+}
+
+.sdr ul li a:hover {
+    color: #004499;
+}
+
+/* Iframe */
+.sdr__iframe iframe {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px) {
+    .sdr {
+        padding: 15px;
+    }
+
+    .sdr__iframe iframe {
+        height: 350px;
+    }
+
+    .sdr h5 {
+        font-size: 1.1rem;
+    }
+
+    .sdr p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sdr__iframe iframe {
+        height: 300px;
+    }
+
+    .sdr h5 {
+        font-size: 1rem;
+    }
+
+    .sdr p {
+        font-size: 0.85rem;
+    }
+}

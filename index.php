@@ -18,6 +18,9 @@
     </script>
 </head>
 <body>
+
+    <?php include 'components/menu.php'; ?>
+
     <div class="container">
         <div class="select-container">
             <?php
