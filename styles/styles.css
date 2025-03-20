@@ -1,4 +1,41 @@
-/* styles.css */
+/* CSS Resetteri by Miko Savolainen*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/* CSS Resetteri by Miko Savolainen*/
+
+
+@font-face {
+    font-family: LogoFont;
+    src: url(OH3AC-Regular.ttf);
+  }
+
+.LogoFont {
+    font-family: LogoFont;
+    font-size:34px;
+    color:rgb(255, 255, 255);
+    font-weight:normal;
+    margin-top: 31px;
+    margin-bottom: 1px;
+    }
+
 :root {
     --primary-color: #2c3e50;
     --accent-color: #3498db;
@@ -251,5 +288,47 @@ body {
 
     .sdr p {
         font-size: 0.85rem;
+    }
+}
+
+.footer {
+    background-color: #4b0082;
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-info, .solar-data {
+
+    padding: 0 20px;
+}
+
+.solar-data{
+    align-self: flex-end;
+}
+.footer-copyright {
+    font-size: 16px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .contact-info, .solar-data {
+        width: 100%;
+        text-align: left;
+    }
+
+    #solar-data {
+        display: none;
     }
 }

@@ -1,4 +1,6 @@
 <!-- menu.php -->
+
+<html>
 <div id="mySidenav" class="sidenav menu">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.php">Etusivu</a>
@@ -27,3 +29,4 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 </script>
+</html>

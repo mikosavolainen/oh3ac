@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testi PDF</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>OH3AC</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/Logot/oh3ac5.ico" />
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             paivitaPDF(); 
@@ -13,7 +14,11 @@
         function paivitaPDF() {
             var select = document.getElementById("pdfValitsin");
             var pdfObject = document.getElementById("pdfNaytin");
-            pdfObject.data = select.value || 'about:blank';
+            var selectedValue = select.value || 'about:blank';
+            
+            // Näytä latausindikaattori
+            pdfObject.innerHTML = '<p>Ladataan...</p>';
+            pdfObject.data = selectedValue;
         }
     </script>
 </head>
@@ -40,9 +45,11 @@
                 }
             }
 
-            
-            arsort($tiedostotJaAjat);
-            $järjestetytTiedostot = array_keys($tiedostotJaAjat);
+            if (empty($tiedostotJaAjat)) {
+                echo '<p>Ei saatavilla olevia PDF-tiedostoja.</p>';
+            } else {
+                arsort($tiedostotJaAjat);
+                $järjestetytTiedostot = array_keys($tiedostotJaAjat);
             ?>
             
             <select id="pdfValitsin" onchange="paivitaPDF()">
@@ -54,11 +61,15 @@
                     </option>
                 <?php endforeach; ?>
             </select>
+            <?php } ?>
         </div>
 
-        <object id="pdfNaytin" type="application/pdf">
-            <p>PDF-tiedoston näyttäminen ei onnistu selaimellasi.</p>
-        </object>
+        <div id="pdfNaytinContainer">
+            <object id="pdfNaytin" type="application/pdf" width="100%" height="600px">
+                <p>PDF-tiedoston näyttäminen ei onnistu selaimellasi.</p>
+            </object>
+        </div>
     </div>
+    <?php include 'components/footer.php'; ?>
 </body>
 </html>
