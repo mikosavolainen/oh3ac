@@ -50,7 +50,7 @@ a {
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.6;
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -175,6 +175,7 @@ body {
   }
   
   .menu a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
