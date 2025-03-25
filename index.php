@@ -26,8 +26,8 @@
 
     <?php include 'components/menu.php'; ?>
 
-    <div class="container">
-        <div class="select-container">
+    <div class="etusivu-container">
+        <div class="etusivu-select-container">
             <?php
             $kansio = 'pdf/';
             

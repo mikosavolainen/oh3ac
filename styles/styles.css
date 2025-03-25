@@ -58,19 +58,14 @@ body {
     min-height: 100vh;
 }
 
-.container {
+
+
+.etusivu-container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-h1 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    text-align: center;
-}
-
-.select-container {
+.etusivu-select-container {
     margin-bottom: 30px;
     text-align: center;
 }
@@ -156,11 +151,8 @@ h1 {
 }
 
 
-/* styles.css */
-body {
-    font-family: "Lato", sans-serif;
-  }
-  
+/* ###################################MENU SIVUVALIKKO###################################*/
+
   .menu {
     height: 100%;
     width: 0;
@@ -201,16 +193,10 @@ body {
     .menu a {font-size: 18px;}
   }
 
-/* Yleiset tyylit */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f9f9f9;
-}
+/* ###################################MENU SIVUVALIKKO###################################*/
 
+
+/* ################################### SDR ###################################*/
 .sdr {
     max-width: 1200px;
     margin: 0 auto;
@@ -291,7 +277,9 @@ body {
         font-size: 0.85rem;
     }
 }
+/* ################################### SDR ###################################*/
 
+/* ################################### FOOTER ###################################*/
 .footer {
     background-color: #4b0082;
     color: white;
@@ -333,3 +321,4 @@ body {
         display: none;
     }
 }
+/* ################################### FOOTER ###################################*/
