@@ -54,7 +54,7 @@ body {
     line-height: 1.6;
     background-color: var(--bg-color);
     color: var(--text-color);
-    padding: 20px;
+
     min-height: 100vh;
 }
 
@@ -322,3 +322,44 @@ body {
     }
 }
 /* ################################### FOOTER ###################################*/
+
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Varmistaa, että sisältö on molemmissa päissä */
+    align-items: center; /* Keskittää sisällön pystysuunnassa */
+background-color: #8181813b;
+
+    color: white;
+    padding: 10px 20px;
+}
+
+.header_menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+
+    order: -1; /* Sijoitetaan vasempaan reunaan */
+}
+
+.header_logo {
+    max-height: 50px;
+    display: block ; /* Piilotetaan oletuksena */
+
+}
+
+/* Pienille näytöille (esim. mobiililaitteet) */
+@media (max-width: 768px) {
+    .header_menu-icon {
+        display: block; /* Näytetään menu-icon */
+    }
+    .header_logo {
+        display: none; /* Piilotetaan logo */
+    }
+}
+
+/* Isommille näytöille (esim. tabletit ja tietokoneet) */
+@media (min-width: 769px) {
+    .header_logo {
+        display: block; /* Näytetään logo */
+    }
+}

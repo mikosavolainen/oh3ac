@@ -22,8 +22,9 @@
         }
     </script>
 </head>
-<body>
 
+<body>
+<?php include 'components/header.php'; ?>
     <?php include 'components/menu.php'; ?>
 
     <div class="etusivu-container">
