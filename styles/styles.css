@@ -481,3 +481,72 @@ background-color: #8181813b;
         font-size: 0.9rem;
     }
 }
+
+
+/* laitteisto */
+.laitteisto {
+    max-width: 100%; 
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.laitteisto h1 {
+    text-align: center;
+    color: #0056b3;
+}
+
+.laitteisto h2 {
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.laitteisto p {
+    margin: 10px 0;
+}
+
+.laitteisto ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.laitteisto a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.laitteisto a:hover {
+    text-decoration: underline;
+}
+
+.laitteisto-info {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 4px solid #007BFF;
+    border-radius: 4px;
+}
+
+/* Responsiivisuuden säilyttäminen */
+@media (max-width: 768px) {
+    .laitteisto {
+        padding: 15px;
+    }
+
+    .laitteisto h1 {
+        font-size: 1.5rem;
+    }
+
+    .laitteisto h2 {
+        font-size: 1.2rem;
+    }
+
+    .laitteisto p,
+    .laitteisto ul {
+        font-size: 0.9rem;
+    }
+}

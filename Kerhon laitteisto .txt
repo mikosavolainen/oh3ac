@@ -1,0 +1,24 @@
+HF:
+Icom ic-7300
+160m puolena aallon dipoli
+80m puolena aallon dipoli
+
+
+yagi Masto:
+ylhäätä alaspäin
+6 elementtinen 15m
+5 elementtinen 20m
+2 elemenntinen kela yagi
+3 elementtinen WARC 12/18m yagi
+5 elementtine yagi 10m
+
+ACOM 2000A 1,5KW linukka 160-6m
+Tokyo hy-power HL-700B 600W
+
+
+VHF/UHF:
+Icom ic-910
+
+yagi Masto
+2m ja 70cm yagit
+

@@ -10,7 +10,7 @@
     <button class="dropdown-btn" onclick="toggleDropdown(this)">Esittely</button>
     <div class="dropdown-container">
 
-        <a href="about.php#vision">OH3AC Laitteisto</a>
+        <a href="laitteisto.php">OH3AC Laitteisto</a>
         <a href="toistimet.php">Toistimet</a>
         <a href="about.php#team">Hallitus</a>
         <a href="about.php">Kerhon historia</a>
