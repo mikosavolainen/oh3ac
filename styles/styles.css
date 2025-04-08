@@ -550,3 +550,66 @@ background-color: #8181813b;
         font-size: 0.9rem;
     }
 }
+
+/* Yleinen tyylitys */
+.hallitus {
+    max-width: 100%; /* Koko leveys */
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hallitus h1 {
+    text-align: center;
+    color: #0056b3;
+}
+
+.hallitus h2 {
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.hallitus p {
+    margin: 10px 0;
+}
+
+.hallitus a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.hallitus a:hover {
+    text-decoration: underline;
+}
+
+.hallitus-info {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 4px solid #007BFF;
+    border-radius: 4px;
+}
+
+/* Responsiivisuuden säilyttäminen */
+@media (max-width: 768px) {
+    .hallitus {
+        padding: 15px;
+    }
+
+    .hallitus h1 {
+        font-size: 1.5rem;
+    }
+
+    .hallitus h2 {
+        font-size: 1.2rem;
+    }
+
+    .hallitus p,
+    .hallitus ul {
+        font-size: 0.9rem;
+    }
+}

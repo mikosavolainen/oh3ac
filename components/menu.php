@@ -12,7 +12,7 @@
 
         <a href="laitteisto.php">OH3AC Laitteisto</a>
         <a href="toistimet.php">Toistimet</a>
-        <a href="about.php#team">Hallitus</a>
+        <a href="Hallitus.php">Hallitus</a>
         <a href="about.php">Kerhon historia</a>
     </div>
 
