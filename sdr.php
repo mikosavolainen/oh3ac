@@ -1,7 +1,6 @@
 
 <?php
 include 'components/header.php';
-include 'components/menu.php';
 ?>
 
 <head>

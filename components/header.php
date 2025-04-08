@@ -1,3 +1,6 @@
+<?php
+include 'components/menu.php';
+?>
 <!DOCTYPE html>
 <html lang="fi">
 <header class="header">

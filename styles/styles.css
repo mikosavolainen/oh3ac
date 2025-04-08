@@ -153,46 +153,95 @@ body {
 
 /* ###################################MENU SIVUVALIKKO###################################*/
 
-  .menu {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  
-  .menu a {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .menu a:hover {
-    color: #f1f1f1;
-  }
-  
-  .menu .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .menu {padding-top: 15px;}
-    .menu a {font-size: 18px;}
-  }
+        /* ###################################MENU SIVUVALIKKO################################### */
+        .menu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
 
+        .menu a {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: #f1f1f1;
+        }
+
+        .menu .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .menu { padding-top: 15px; }
+            .menu a { font-size: 18px; }
+        }
+
+        /* Alavalikon tyylit */
+        .dropdown-container {
+            display: none;
+            padding-left: 20px;
+            background-color: #262626;
+        }
+
+        .dropdown-btn {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 25px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            color: #818181;
+            padding: 8px 8px 8px 32px;
+            text-align: left;
+            outline: none;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .dropdown-btn:hover {
+            color: #f1f1f1;
+        }
+
+        .dropdown-container a {
+            padding: 8px 8px 8px 52px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .dropdown-container a:hover {
+            color: #f1f1f1;
+        }
+
+        /* Avattu valikon nuoli */
+        .dropdown-btn::after {
+            content: "+";
+            float: right;
+            margin-right: 10px;
+        }
+
+        .dropdown-btn.active::after {
+            content: "-";
+        }
 /* ###################################MENU SIVUVALIKKO###################################*/
 
 
@@ -361,5 +410,74 @@ background-color: #8181813b;
 @media (min-width: 769px) {
     .header_logo {
         display: block; /* Näytetään logo */
+    }
+}
+
+/* Toistin sivu */
+
+.toistimet {
+    max-width: 100%; /* Koko leveys */
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toistimet h1 {
+    text-align: center;
+    color: #0056b3;
+}
+
+.toistimet h2 {
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.toistimet p {
+    margin: 10px 0;
+}
+
+.toistimet ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.toistimet a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.toistimet a:hover {
+    text-decoration: underline;
+}
+
+.toistin-info {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 4px solid #007BFF;
+    border-radius: 4px;
+}
+
+/* Responsiivisuuden säilyttäminen */
+@media (max-width: 768px) {
+    .toistimet {
+        padding: 15px;
+    }
+
+    .toistimet h1 {
+        font-size: 1.5rem;
+    }
+
+    .toistimet h2 {
+        font-size: 1.2rem;
+    }
+
+    .toistimet p,
+    .toistimet ul {
+        font-size: 0.9rem;
     }
 }
