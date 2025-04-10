@@ -330,10 +330,38 @@ body {
 
 /* ################################### FOOTER ###################################*/
 .footer {
-    background-color: #4b0082;
+    position: relative;
+    background-color: #2E3192; /* Footerin päätaustaväri */
     color: white;
-    padding: 20px;
+    padding: 60px 20px 20px; /* Lisätty ylimarginaalia aallon tilaa varten */
     text-align: left;
+    overflow: hidden; /* Varmistetaan, että aalto ei mene footerin ulkopuolelle */
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Aallon koko */
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(72, 104, 218, 0.6), transparent 70%);
+    transform: rotate(-5deg); /* Kallistus aallon muotoon */
+    transform-origin: top left;
+    z-index: -1; /* Asetetaan taustalle */
+}
+
+.footer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200%; /* Aallon koko */
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(72, 104, 218, 0.6), transparent 70%);
+    transform: rotate(5deg); /* Kallistus aallon muotoon */
+    transform-origin: bottom right;
+    z-index: -1; /* Asetetaan taustalle */
 }
 
 .footer-content {
