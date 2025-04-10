@@ -18,7 +18,7 @@
 
     <a href="services.php">Jäsensivut</a>
     <a href="contact.php">OH3R</a>
-    <a href="contact.php">Valokuvat</a>
+    <a href="galleria.php">Valokuvat</a>
     <a href="contact.php">RA-Kurssi</a>
     <a href="sdr.php">Kerhon SDR</a>
     <a href="https://wiki.sral.fi/wiki/Etusivu" target="_blank">Radio WIKI</a>

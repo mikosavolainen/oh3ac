@@ -91,5 +91,6 @@ include 'components/header.php';
             </div>
         </section>
     </div>
+    <?php include 'components/footer.php'; ?>
 </body>
 </html>

@@ -61,5 +61,7 @@ include 'components/header.php';
             <p>Kerhon toistinasemien valvojana toimii Marko, OH3MN. Mikäli toistimella kuulee liikennettä, joka ei ole radioamatöörimääräysten mukaista, Markon tavoittaa puhelinnumerosta <a href="tel:+358504396548">050 439 6548</a>.</p>
         </section>
     </div>
+    <?php include 'components/footer.php'; ?>
 </body>
+
 </html>
