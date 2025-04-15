@@ -6,7 +6,7 @@ include 'components/menu.php';
 <header class="header">
     <!-- Vasen: Hamburger-nappi -->
     <span class="header_menu-icon" onclick="openNav()">&#9776;</span>
-
+<p class="LogoFont_Musta">OH3AC</p>
     <!-- Oikea: Logo -->
     <img src="images/Logot/OH3AC-MastoLogo.svg" alt="Logo" class="header_logo">
 </header>

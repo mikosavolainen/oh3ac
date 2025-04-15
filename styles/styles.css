@@ -36,6 +36,16 @@ a {
     margin-bottom: 1px;
     }
 
+    .LogoFont_Musta {
+        font-family: LogoFont;
+        font-size:40px;
+        color:rgb(0, 0, 0);
+        font-weight:normal;
+        margin-top: 31px;
+        margin-bottom: 1px;
+        text-align: center;
+        }   
+
 :root {
     --primary-color: #2c3e50;
     --accent-color: #3498db;
@@ -404,8 +414,8 @@ body {
 .header {
     display: flex;
     justify-content: space-between; /* Varmistaa, että sisältö on molemmissa päissä */
-    align-items: center; /* Keskittää sisällön pystysuunnassa */
-background-color: #8181813b;
+    align-items: center;
+    background-color: #8181813b;
 
     color: white;
     padding: 10px 20px;

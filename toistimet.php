@@ -7,12 +7,12 @@ include 'components/header.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kerhon Toistinasetmat ja DMR</title>
+    <title>Kerhon Toistinasemat ja DMR</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
     <div class="toistimet">
-        <h1>Kerhon Toistinasetmat ja DMR</h1>
+        <h1>Kerhon Toistinasemat ja DMR</h1>
 
         <section>
             <h2>Toistinasetmat</h2>
