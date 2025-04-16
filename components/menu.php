@@ -16,11 +16,12 @@
         <a href="about.php">Kerhon historia</a>
     </div>
 
-    <a href="services.php">Jäsensivut</a>
+    <a href="jasensivu.php">Jäsensivut</a>
     <a href="contact.php">OH3R</a>
     <a href="galleria.php">Valokuvat</a>
     <a href="contact.php">RA-Kurssi</a>
     <a href="sdr.php">Kerhon SDR</a>
+    <a href="historia.php">Historia</a>
     <a href="https://wiki.sral.fi/wiki/Etusivu" target="_blank">Radio WIKI</a>
     <a href="https://vanhat.oh3ac.fi">Arkisto</a>
 </div>

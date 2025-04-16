@@ -7,7 +7,7 @@ include 'components/header.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OH3AC Laitteisto</title>
+    <title>OH3AC - LAHDEN RADIOAMATÖÖRIKERHO RY</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
@@ -22,12 +22,12 @@ include 'components/header.php';
             <div class="laitteisto-info">
                 <h3>HF-Rigit</h3>
                 <ul>
-                    <li><strong>Malli:</strong> Icom IC-7300</li>
+                    <li>Malli: Icom IC-7300</li>
                     <p>Lainattavissa olevat rigit:</p>
                     <ul>
                     
                     <li>Yaesu FT-450</li>
-                    <li>icom ic-706</li>
+                    <li>icom IC-706</li>
                     </ul>
                 </ul>
             </div>
@@ -71,7 +71,7 @@ include 'components/header.php';
             <div class="laitteisto-info">
                 <h3>VHF/UHF-Rigi</h3>
                 <ul>
-                    <li><strong>Malli:</strong> Icom IC-910</li>
+                    <li>Malli: Icom IC-910</li>
                     
 
                     <p>Lainattavissa olevat rigit:</p>
