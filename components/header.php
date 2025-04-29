@@ -3,6 +3,15 @@ include 'components/menu.php';
 ?>
 <!DOCTYPE html>
 <html lang="fi">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-12E7VJ916H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-12E7VJ916H', { 'send_page_view': true });
+  </script>
+</head>
 <header class="header">
     <!-- Vasen: Hamburger-nappi -->
     <span class="header_menu-icon" onclick="openNav()">&#9776;</span>
