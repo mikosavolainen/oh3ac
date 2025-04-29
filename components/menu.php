@@ -19,7 +19,14 @@
     <a href="jasensivu.php">Jäsensivut</a>
     <a href="contact.php">OH3R</a>
     <a href="galleria.php">Valokuvat</a>
-    <a href="contact.php">RA-Kurssi</a>
+
+    <button class="dropdown-btn" onclick="toggleDropdown(this)">RA-Kurssi</button>
+    <div class="dropdown-container">
+        <a href="laitteisto.php">Tulevat kurssit</a>
+        <a href="toistimet.php">Materiaali</a>
+    </div>
+    
+    <a href="kauppa.php">Myynnissä</a>
     <a href="sdr.php">Kerhon SDR</a>
     <a href="historia.php">Historia</a>
     <a href="https://wiki.sral.fi/wiki/Etusivu" target="_blank">Radio WIKI</a>
