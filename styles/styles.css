@@ -935,86 +935,174 @@ body {
     }
 }
 
-/* ra-tentti */
-.ra-tentti {
-    max-width: 100%; 
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+
+
+/* Container keskelle */
+.ra-main-container {
+    max-width: auto;
+    margin: auto;
+    padding: 2rem;
 }
 
-.ra-tentti h1 {
+/* Johdantohermosektio */
+.ra-hero {
     text-align: center;
-    color: #0056b3;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+    background: linear-gradient(to right, #0077cc, #004488);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+.ra-hero:hover {
+    transform: translateY(-5px);
 }
 
-.ra-tentti h2 {
-    color: #007BFF;
-    border-bottom: 2px solid #007BFF;
-    padding-bottom: 5px;
-    margin-top: 20px;
-    font-weight: 600;
+.ra-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-.ra-tentti p {
-    margin: 10px 0;
-    line-height: 1.6;
+/* Moduulilohkot */
+.ra-modules-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
-.ra-tentti ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding-left: 15px;
+.ra-module-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #0077cc;
+    transition: all 0.3s ease;
+}
+.ra-module-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.ra-tentti a {
-    color: #007BFF;
+.ra-basic .ra-power {
+    color: #0077cc;
+}
+.ra-advanced .ra-power {
+    color: #ff6f61;
+}
+
+/* Vertailutaulukko */
+.ra-comparison-section {
+    margin-bottom: 3rem;
+}
+
+.ra-comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+.ra-comparison-table th,
+.ra-comparison-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.ra-comparison-table thead {
+    background: #0077cc;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .ra-comparison-table thead {
+        display: none;
+    }
+    .ra-comparison-table tr {
+        display: block;
+        margin-bottom: 1rem;
+    }
+    .ra-comparison-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+    }
+    .ra-comparison-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #0077cc;
+    }
+}
+
+/* --- SÄÄDÖKSET JA LAINSÄÄDÄNTÖ --- */
+.ra-regulations-section {
+    margin-bottom: 3rem;
+}
+
+.ra-regulations-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0077cc;
+}
+
+.regulation-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 6px solid #0077cc;
+}
+
+.regulation-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.regulation-card h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: #004488;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.regulation-card ul {
+    padding-left: 1.2rem;
+}
+
+.regulation-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* Resurssit */
+.resource-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resource-list li {
+    margin-bottom: 0.75rem;
+}
+
+.resource-list a {
+    color: #0077cc;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
-
-.ra-tentti a:hover {
+.resource-list a:hover {
+    color: #005fa3;
     text-decoration: underline;
-    color: #0056b3;
-}
-
-.ra-tentti-info {
-    margin-bottom: 20px;
-    padding: 15px;
-    background: #f9f9f9;
-    border-left: 4px solid #007BFF;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-.ra-tentti h3 {
-    color: #003d80;
-    margin-top: 15px;
-}
-
-/* Responsiivisuus */
-@media (max-width: 768px) {
-    .ra-tentti {
-        padding: 15px;
-    }
-
-    .ra-tentti h1 {
-        font-size: 1.5rem;
-    }
-
-    .ra-tentti h2 {
-        font-size: 1.2rem;
-    }
-
-    .ra-tentti p,
-    .ra-tentti ul {
-        font-size: 0.9rem;
-    }
-
-    .ra-tentti-info {
-        padding: 10px;
-    }
 }

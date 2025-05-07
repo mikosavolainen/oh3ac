@@ -4,6 +4,7 @@ include 'components/menu.php';
 <!DOCTYPE html>
 <html lang="fi">
 <head>
+  <link rel="icon" href="images/Logot/oh3ac5.ico" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-12E7VJ916H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];

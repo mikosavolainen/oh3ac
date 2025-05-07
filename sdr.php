@@ -8,7 +8,7 @@ include 'components/header.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OH3AC</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="images/Logot/oh3ac5.ico" />
+
 </head>
 <body>
     

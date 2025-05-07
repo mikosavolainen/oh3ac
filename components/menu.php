@@ -13,7 +13,7 @@
         <a href="laitteisto.php">OH3AC Laitteisto</a>
         <a href="toistimet.php">Toistimet</a>
         <a href="Hallitus.php">Hallitus</a>
-        <a href="about.php">Kerhon historia</a>
+        <a href="historia.php">Kerhon historia</a>
     </div>
 
     <a href="jasensivu.php">Jäsensivut</a>
@@ -28,7 +28,7 @@
     
     <a href="kauppa.php">Myynnissä</a>
     <a href="sdr.php">Kerhon SDR</a>
-    <a href="historia.php">Historia</a>
+    <a href="kerhokirjeet.php">Kaikki kerhokirjeet</a>
     <a href="https://wiki.sral.fi/wiki/Etusivu" target="_blank">Radio WIKI</a>
     <a href="https://vanhat.oh3ac.fi">Arkisto</a>
 </div>
