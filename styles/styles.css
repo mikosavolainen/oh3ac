@@ -257,132 +257,160 @@ body {
 /* ###################################MENU SIVUVALIKKO###################################*/
 
 
-/* ################################### SDR ###################################*/
-.sdr {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-.sdr h5 {
-    color: #0066cc;
-    font-size: 1.2rem;
-    margin-top: 20px;
-}
-
-.sdr p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-}
-
-.sdr ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sdr ul li {
-    margin-bottom: 10px;
-}
-
-.sdr ul li a {
-    text-decoration: none;
-    color: #0066cc;
-    transition: color 0.3s ease;
-}
-
-.sdr ul li a:hover {
-    color: #004499;
-}
-
-/* Iframe */
-.sdr__iframe iframe {
-    width: 100%;
-    height: 500px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-/* Responsiivisuus */
-@media (max-width: 768px) {
-    .sdr {
-        padding: 15px;
-    }
-
-    .sdr__iframe iframe {
-        height: 350px;
-    }
-
-    .sdr h5 {
-        font-size: 1.1rem;
-    }
-
-    .sdr p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .sdr__iframe iframe {
-        height: 300px;
-    }
-
-    .sdr h5 {
-        font-size: 1rem;
-    }
-
-    .sdr p {
-        font-size: 0.85rem;
-    }
-}
-/* ################################### SDR ###################################*/
-
-/* ################################### FOOTER ###################################*/
+/* ################################### FOOTER ################################### */
 .footer {
-    background-color: #4b0082;
-    color: white;
-    padding: 20px;
-    text-align: left;
+    background-image: url("/images/alaT-BG.jpg");
+    color: #000;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+}
+
+.footer-wave-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.footer-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    enable-background: new 0 0 100 100;
+}
+
+.footer-path {
+    fill: white;
+    opacity: 0.2;
+    stroke: white;
+    stroke-width: 2;
 }
 
 .footer-content {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    color: #000;
 }
 
-.contact-info, .solar-data {
-
+.contact-info,
+.solar-data {
     padding: 0 20px;
 }
 
-.solar-data{
-    align-self: flex-end;
-}
 .footer-copyright {
-    font-size: 16px;
+    width: 100%;
     text-align: center;
+    margin-top: 30px;
+    z-index: 2;
+    position: relative;
 }
 
+/* Responsiivisuus */
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
     }
 
-    .contact-info, .solar-data {
+    .contact-info,
+    .solar-data {
         width: 100%;
         text-align: left;
     }
 
-    #solar-data {
+    .solar-data {
         display: none;
     }
 }
-/* ################################### FOOTER ###################################*/
+/* ################################### FOOTER ################################### */
+
+
+/* ################################### FOOTER ################################### */
+.footer {
+    background-image: url("/images/alaT-BG.jpg");
+    color: rgb(0, 0, 0);
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+  }
+  
+  .footer-wave-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .footer-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .footer-path {
+    opacity: 0.2;
+    stroke: white;
+    stroke-width: 2px;
+  }
+  
+  /* Glow efekti */
+  #glow {
+    filter: url(#glow);
+  }
+  
+  .blur {
+    /* Voit lisätä tyylejä tarvittaessa */
+  }
+  
+  .footer-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .contact-info,
+  .solar-data {
+    padding: 0 20px;
+  }
+  
+  .footer-copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    z-index: 2;
+    position: relative;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+  
+    .contact-info,
+    .solar-data {
+      width: 100%;
+      text-align: left;
+    }
+  
+    .solar-data {
+      display: none;
+    }
+  }
+  /* ################################### FOOTER ################################### */
 
 
 .header {
