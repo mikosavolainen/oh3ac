@@ -1,36 +1,32 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8" />
-  <title>Footer - OH3AC</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
 </head>
 <body>
 
   <footer class="footer">
 
-    <!-- Aaltoviiva -->
-    <div class="footer-wave-container">
-      <svg class="footer-svg" viewBox="0 0 1920 300" preserveAspectRatio="none" id="wave-svg">
+    <!-- ************* Uusi Sine-aalto animaatio ************* -->
+    <div class="footer-sine-container">
+      <svg class="footer-sine-svg" viewBox="0 0 1920 250" preserveAspectRatio="none">
         <defs>
           <filter id="glow">
-            <feGaussianBlur class="blur" result="coloredBlur" stdDeviation="4"></feGaussianBlur>
+            <feGaussianBlur result="coloredBlur" stdDeviation="4"></feGaussianBlur>
             <feMerge>
               <feMergeNode in="coloredBlur"></feMergeNode>
               <feMergeNode in="SourceGraphic"></feMergeNode>
             </feMerge>
           </filter>
         </defs>
-        <path class="footer-path" id="wave"
-          d="M0,150 C300,0 600,300 960,150 C1320,0 1620,300 1920,150 L1920,300 L0,300 Z"
-          opacity="0.6"
-          stroke="white"
-          stroke-width="2"
-          filter="url(#glow)" />
+        <path class="footer-sine-path" id="sine-wave"
+              d="M0,125 C100,25 300,225 400,125 C500,25 700,225 800,125 C900,25 1100,225 1200,125 C1300,25 1500,225 1600,125 C1700,25 1900,225 1920,125"
+              stroke="white" stroke-width="6" fill="none" opacity="0.6" filter="url(#glow)" />
       </svg>
     </div>
 
-    <!-- Footer sisältö -->
+    <!-- ************* Footer sisältö ************* -->
     <div class="footer-content">
       <div class="contact-info">
         <h7 class="LogoFont_Musta">OH3AC</h7>
@@ -55,43 +51,35 @@
 
   </footer>
 
+  <!-- ************* Animaatiologiikka ************* -->
   <script>
-    const wave = document.getElementById('wave');
-    const svg = document.getElementById('wave-svg');
+    const sineWave = document.getElementById('sine-wave');
     let t = 0;
 
-    // Laske korkeus footerin mukaan
-    function getWaveHeight() {
-      return window.innerHeight * 0.05 + 80; // Mobiilille pienempi korkeus, desktopille enemmän
+    function animateSineWave() {
+      const pathData = generatePath(t);
+      sineWave.setAttribute('d', pathData);
+      t += 2;
+
+      requestAnimationFrame(animateSineWave);
     }
 
-    function animateWave() {
-      const pathHeight = getWaveHeight();
-      const amplitude = 40; // Aallon "korkeus"
-      const points = [];
+    function generatePath(timeOffset) {
+      const amplitude = 40; // Aallon korkeus
+      const wavelength = 300; // Kuinka pitkä aallonpituus
+      const baseY = 125;
 
-      for (let i = 0; i <= 1920; i += 10) {
-        const y = pathHeight / 2 + amplitude * Math.sin((i + t) / 20);
-        points.push(`${i},${y}`);
+      let points = [];
+
+      for (let x = 0; x <= 1920; x++) {
+        const y = baseY + amplitude * Math.sin((x + timeOffset) / wavelength * Math.PI);
+        points.push(`${x},${y}`);
       }
 
-      const pathData = `M0,${pathHeight / 2} L${points.join(" L")} L1920,${pathHeight} L0,${pathHeight} Z`;
-      wave.setAttribute('d', pathData);
-      t += 1;
-
-      requestAnimationFrame(animateWave);
+      return 'M' + points.join(' L');
     }
 
-    function resizeSVG() {
-      const height = getWaveHeight();
-      svg.setAttribute('viewBox', `0 0 1920 ${height}`);
-    }
-
-    window.addEventListener('resize', resizeSVG);
-
-    // Käynnistä animaatio
-    animateWave();
-    resizeSVG();
+    animateSineWave();
   </script>
 
 </body>

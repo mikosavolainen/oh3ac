@@ -258,120 +258,47 @@ body {
 
 
 /* ################################### FOOTER ################################### */
+
 .footer {
     background-image: url("/images/alaT-BG.jpg");
-    color: #000;
-    padding: 40px 20px;
-    position: relative;
-    overflow: hidden;
-    min-height: 300px;
-}
-
-.footer-wave-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    overflow: hidden;
-}
-
-.footer-svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-    enable-background: new 0 0 100 100;
-}
-
-.footer-path {
-    fill: white;
-    opacity: 0.2;
-    stroke: white;
-    stroke-width: 2;
-}
-
-.footer-content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    color: #000;
-}
-
-.contact-info,
-.solar-data {
-    padding: 0 20px;
-}
-
-.footer-copyright {
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-    z-index: 2;
-    position: relative;
-}
-
-/* Responsiivisuus */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-    }
-
-    .contact-info,
-    .solar-data {
-        width: 100%;
-        text-align: left;
-    }
-
-    .solar-data {
-        display: none;
-    }
-}
-/* ################################### FOOTER ################################### */
-
-
-/* ################################### FOOTER ################################### */
-.footer {
-    background-image: url("/images/alaT-BG.jpg");
-    color: rgb(0, 0, 0);
+    color: black;
     padding: 40px 20px;
     position: relative;
     overflow: hidden;
     min-height: 300px;
   }
   
-  .footer-wave-container {
+  /* ************* Sine-aalto animaatio ************* */
+  
+  .footer-sine-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     z-index: 0;
   }
   
-  .footer-svg {
+  .footer-sine-svg {
     display: block;
     width: 100%;
     height: 100%;
   }
   
-  .footer-path {
-    opacity: 0.2;
+  .footer-sine-path {
     stroke: white;
-    stroke-width: 2px;
+    stroke-width: 6px;
+    fill: none;
+    opacity: 0.6;
   }
   
-  /* Glow efekti */
-  #glow {
+  /* Glow effect (SVG filter) */
+  .footer-sine-svg filter {
     filter: url(#glow);
   }
   
-  .blur {
-    /* Voit lisätä tyylejä tarvittaessa */
-  }
+  /* ************* Footer sisältö ************* */
   
   .footer-content {
     position: relative;
@@ -395,6 +322,8 @@ body {
     position: relative;
   }
   
+  /* ************* Responsive ************* */
+  
   @media (max-width: 768px) {
     .footer-content {
       flex-direction: column;
@@ -410,14 +339,18 @@ body {
       display: none;
     }
   }
-  /* ################################### FOOTER ################################### */
+/* ################################### FOOTER ################################### */
 
+
+/* ################################### HEADER ################################### */
 
 .header {
     display: flex;
     justify-content: space-between; /* Varmistaa, että sisältö on molemmissa päissä */
     align-items: center;
-    background-color: #8181813b;
+    background-image: url("/images/ylaT-BG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 
     color: white;
     padding: 10px 20px;
