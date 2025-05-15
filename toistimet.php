@@ -37,7 +37,7 @@ include 'components/header.php';
             </div>
 
             <div class="toistin-info">
-                <h3>144.800 MHz APRS-Digipeater (OH3RDH)</h3>
+                <h3>144.800 MHz APRS-Digipeater (OH3RDH) EI KÄYTÖSSÄ</h3>
                 <ul>
                     <li>Taajuus: 144.800 MHz</li>
                     <li>Tyyppi: APRS-Digipeater</li>
