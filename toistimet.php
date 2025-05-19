@@ -8,7 +8,7 @@ include 'components/header.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OH3AC - LAHDEN RADIOAMATÖÖRIKERHO RY</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <div class="toistimet">
