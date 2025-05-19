@@ -12,11 +12,15 @@ include 'components/menu.php';
     gtag('js', new Date());
     gtag('config', 'G-12E7VJ916H', { 'send_page_view': true });
   </script>
+
+
 </head>
 <header class="header">
     <!-- Vasen: Hamburger-nappi -->
     <span class="header_menu-icon" onclick="openNav()">&#9776;</span>
-<p class="LogoFont_Musta">OH3AC</p>
+    
+
+    <p class="header_logo-text">OH3AC</p>
     <!-- Oikea: Logo -->
     <img src="images/Logot/OH3AC-MastoLogo.svg" alt="Logo" class="header_logo">
 </header>

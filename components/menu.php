@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="fi">
+    <head>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+    </head>
 <body>
 <!-- Sidenav -->
+
 <div id="mySidenav" class="menu">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <a href="javascript:void(0)" class="closeB" onclick="closeNav()" title="CLOSE"><i class="fa fa-close"></i></a>
     <a href="index.php">Etusivu</a>
 
    
@@ -34,14 +40,17 @@
 </div>
 
 <script>
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-    }
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.querySelector('.reorderB').style.display = 'none';
+    document.querySelector('.closeB').style.display = 'block';
+}
 
-    
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-    }
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.querySelector('.reorderB').style.display = 'block';
+    document.querySelector('.closeB').style.display = 'none';
+}
 
     function toggleDropdown(button) {
         const container = button.nextElementSibling;
