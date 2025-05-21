@@ -19,6 +19,7 @@ include 'components/menu.php';
     <!-- Vasen: Hamburger-nappi -->
     <span class="header_menu-icon" onclick="openNav()">&#9776;</span>
     
+    
 
     <p class="header_logo-text">OH3AC</p>
     <!-- Oikea: Logo -->
