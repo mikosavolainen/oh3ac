@@ -27,10 +27,10 @@
 
     <button class="dropdown-btn" onclick="toggleDropdown(this)">RA-Kurssi</button>
     <div class="dropdown-container">
-        <a href="laitteisto.php">Tulevat kurssit</a>
+        <a href="ra-kurssit.php">Tulevat kurssit</a>
         <a href="ra-materiaali.php">Materiaali</a>
     </div>
-    
+    <a href="pikasivu.php">Pikasivu</a>
     <a href="kauppa.php">Myynnissä</a>
     <a href="sdr.php">Kerhon SDR</a>
     <a href="kerhokirjeet.php">Kaikki kerhokirjeet</a>
