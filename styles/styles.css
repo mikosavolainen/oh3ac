@@ -127,9 +127,6 @@ body {
 }
 
 @media (min-width: 769px) {
-    .container {
-        padding: 40px;
-    }
     
     #pdfNaytin {
         height: 600px;
@@ -1232,5 +1229,147 @@ body {
     .kurssi-info {
         padding: 1rem;
         margin-bottom: 1.5rem;
+    }
+}
+
+
+/* ################################### PIKASIVU ################################### */
+
+
+
+/* Vasen pikasivu-sarake */
+
+.pikasivu-aside {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* Karttainkki */
+.pikasivu-map {
+    text-align: center;
+}
+
+.pikasivu-centered {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.pikasivu-hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Fieldset-lohkot / Pikalinkit */
+.pikasivu-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.pikasivu-info-box {
+    background-color: #f9f9f9;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.pikasivu-info-box:hover {
+    background-color: #e9e9e9;
+    transform: translateY(-5px);
+}
+
+.pikasivu-info-box legend {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pikasivu-info-box a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.pikasivu-info-box a:hover {
+    text-decoration: underline;
+}
+
+/* Responsiivisuus */
+
+/* Tietokone */
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .pikasivu-aside {
+        width: 30%;
+        max-width: 400px;
+        margin-right: 20px;
+    }
+
+    .pikasivu-centered {
+        font-size: 1.75em;
+    }
+
+    .pikasivu-info-box {
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .pikasivu-aside {
+        width: 45%;
+        max-width: 400px;
+        margin-right: 20px;
+    }
+
+    .pikasivu-centered {
+        font-size: 1.5em;
+    }
+
+    .pikasivu-info-box {
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Mobiili */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pikasivu-aside {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .pikasivu-centered {
+        font-size: 1.25em;
+    }
+
+    .pikasivu-info-box {
+        padding: 15px;
+        margin-bottom: 10px;
     }
 }
