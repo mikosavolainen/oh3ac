@@ -334,7 +334,7 @@ body {
         text-align: right;
         margin-bottom: 20px;
         margin-top: 3px;
-        font-size: 14px;
+        font-size: 17px;
         line-height: 1.5;
         padding-right: 5px;
     }
@@ -344,18 +344,19 @@ body {
 
 .footer_logo-text {
     font-family: LogoFont;
-    font-size: 65px;
+    font-size: 45px;
     color: rgb(0, 0, 0);
     font-weight: normal;
-    text-align: center;
-    margin-top: -5px;
+    text-align: right;
+    
 }
 
 .footer_logo-text2 {
-    margin-top: -20px;
-    font-size: 17px;
+    margin-top: -13px;
+    font-size: 14px;
     color: rgb(0, 0, 0);
     font-weight: bold;
+    text-align: right;
 }
 
 .header_logo-text-container {
@@ -372,7 +373,7 @@ body {
   
   .footer-copyright {
     flex: 1;
-    margin-top: 250px;
+    margin-top: 240px;
     order: -1;
     text-align: center;
     font-size: 12px;
