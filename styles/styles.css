@@ -27,6 +27,12 @@ a {
     src: url(OH3AC-Regular.ttf);
   }
 
+
+  @font-face {
+    font-family: OtsikkoFont;
+    src: url(FuturaNowHeadline.ttf);
+  }
+
 .LogoFont {
     font-family: LogoFont;
     font-size:34px;
@@ -181,13 +187,13 @@ body {
             padding: 8px 8px 8px 32px;
             text-decoration: none;
             font-size: 25px;
-            color: #818181;
+            color: #ffffffc2;
             display: block;
             transition: 0.3s;
         }
 
         .menu a:hover {
-            color: #f1f1f1;
+            color: #ffffff;
         }
 
 
@@ -209,7 +215,7 @@ body {
             cursor: pointer;
             border: none;
             background: none;
-            color: #818181;
+            color: #ffffffc2;
             padding: 8px 8px 8px 32px;
             text-align: left;
             outline: none;
@@ -218,9 +224,14 @@ body {
         }
 
         .dropdown-btn:hover {
-            color: #f1f1f1;
+            color: #ffffff;
         }
 
+
+
+
+
+        
         .dropdown-container a {
             padding: 8px 8px 8px 52px;
             text-decoration: none;
@@ -268,11 +279,13 @@ body {
 
 .footer {
     background-image: url("/images/alaT-BG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     color: black;
-    padding: 40px 20px;
+    padding: 0px 20px;
     position: relative;
     overflow: hidden;
-    min-height: 300px;
+
   }
   
   /* ************* Sine-aalto animaatio ************* */
@@ -295,9 +308,9 @@ body {
   
   .footer-sine-path {
     stroke: white;
-    stroke-width: 6px;
+    stroke-width: 8px;
     fill: none;
-    opacity: 0.6;
+    opacity: 0.5;
   }
   
   /* Glow effect (SVG filter) */
@@ -316,17 +329,55 @@ body {
     flex-wrap: wrap;
   }
   
-  .contact-info,
+    .footer-contact-info {
+        width: 300px;
+        text-align: right;
+        margin-bottom: 20px;
+        margin-top: 3px;
+        font-size: 14px;
+        line-height: 1.5;
+        padding-right: 5px;
+    }
+  
+
+
+
+.footer_logo-text {
+    font-family: LogoFont;
+    font-size: 65px;
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+    text-align: center;
+    margin-top: -5px;
+}
+
+.footer_logo-text2 {
+    margin-top: -20px;
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.header_logo-text-container {
+    color: var(--text-color);
+    order: 0;
+    
+}
+
   .solar-data {
-    padding: 0 20px;
+    order: -1;
+    padding: 20px 20px;
+    
   }
   
   .footer-copyright {
-    width: 100%;
+    flex: 1;
+    margin-top: 250px;
+    order: -1;
     text-align: center;
-    margin-top: 30px;
-    z-index: 2;
-    position: relative;
+    font-size: 12px;
+    opacity: 0.73;
+    
   }
   
   /* ************* Responsive ************* */
@@ -336,7 +387,7 @@ body {
       flex-direction: column;
     }
   
-    .contact-info,
+    
     .solar-data {
       width: 100%;
       text-align: left;
@@ -358,56 +409,73 @@ body {
     background-image: url("/images/ylaT-BG.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-
+   
     color: white;
     padding: 10px 20px;
 }
 
-.header_menu-icon {
-    font-size: 30px;
-    cursor: pointer;
 
-    order: -1; /* Sijoitetaan vasempaan reunaan */
+.header-reorderB {
+
+    margin-left: 30px;
+    order: -1;
+    transform: translateX(-50%);
+    width: 65px;
+    height: 65px;
+    border: 12px solid #000033;
+    background-color: #000033;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    /* säilytetään kulmat – ei pyöristetä */
+    border-radius: 10px; /* Voit säätää tätä esim. 0px = täyskulmainen */
+}
+
+.header-reorderB:hover {
+    background-color: #eaeaea;
+    color: black;
+    border-color: #eaeaea;
+}
+
+.header-reorderB .fa {
+    vertical-align: middle;
 }
 
 
-.reorderB {
- 	width: 46px;
- 	border-style:solid;
-  	border-color:#000033;
-  	border-width: 12px;
-  	border-radius: 30px 30px 30px 30px ;
-  	background-color:#000033;
-  	display: block;
-    letter-spacing: 0px;
-  	text-align: center;
-  	padding: 6px 16px 2px 11px;
-  	text-decoration:none; 
-  	color:#FFFFFF;
-  	font-weight:800;
-  	font-size: 60px;
-	filter: drop-shadow(6px 6px 8px #666666);
-}
-.reorderB:hover {
-  background-color:#eaeaea;
-  color: black;
-}
 
 
 .header_logo {
-    max-height: 50px;
+    max-height: 80px;
     display: block ; /* Piilotetaan oletuksena */
 
 }
 
 .header_logo-text {
     font-family: LogoFont;
-    font-size: 34px;
+    font-size: 65px;
     color: rgb(0, 0, 0);
     font-weight: normal;
-    margin-top: 31px;
-    margin-bottom: 1px;
 }
+
+.header_logo-text2 {
+    margin-top: -18px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.header_logo-text-container {
+    color: var(--text-color);
+    order: 0;
+}
+
 
 /* Pienille näytöille (esim. mobiililaitteet) */
 @media (max-width: 768px) {
@@ -417,7 +485,28 @@ body {
     .header_logo {
         display: none; /* Piilotetaan logo */
     }
+        .header-reorderB {
+        width: 65px;
+        height: 65px;
+        font-size: 35px;
+        border-width: 10px;
+    }
+
+    .header_logo-text {
+    font-family: LogoFont;
+    font-size: 45px;
+    color: rgb(0, 0, 0);
+    font-weight: normal;
 }
+
+.header_logo-text2 {
+    margin-top: -10px;
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+}
+
 
 /* Isommille näytöille (esim. tabletit ja tietokoneet) */
 @media (min-width: 769px) {
@@ -507,6 +596,7 @@ body {
 }
 
 .laitteisto h1 {
+    font-family: OtsikkoFont;
     text-align: center;
     color: #0056b3;
 }
@@ -552,6 +642,7 @@ body {
 
     .laitteisto h1 {
         font-size: 1.5rem;
+        font-family: OtsikkoFont;
     }
 
     .laitteisto h2 {
@@ -576,6 +667,7 @@ body {
 
 .jasensivu h1, .jasensivu h2 {
     color: #0056b3;
+    font-family: OtsikkoFont;
 }
 
 .jasensivu h2 {
@@ -614,6 +706,7 @@ body {
 
     .jasensivu h1 {
         font-size: 1.5rem;
+        font-family: OtsikkoFont;
     }
 
     .jasensivu h2 {
@@ -639,6 +732,7 @@ body {
 
 .historia h1, .historia h2 {
     color: #0056b3;
+    font-family: OtsikkoFont;
 }
 
 .historia h2 {
@@ -677,6 +771,7 @@ body {
 
     .historia h1 {
         font-size: 1.5rem;
+        font-family: OtsikkoFont;
     }
 
     .historia h2 {
@@ -702,6 +797,7 @@ body {
 .hallitus h1 {
     text-align: center;
     color: #0056b3;
+    font-family: OtsikkoFont;
 }
 
 .hallitus h2 {
@@ -740,6 +836,7 @@ body {
 
     .hallitus h1 {
         font-size: 1.5rem;
+        font-family: OtsikkoFont;
     }
 
     .hallitus h2 {
@@ -963,6 +1060,7 @@ body {
 }
 
 .ra-hero h1 {
+    font-family: OtsikkoFont;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -1123,6 +1221,7 @@ body {
 }
 
 .kurssi h1 {
+    font-family: OtsikkoFont;
     text-align: center;
     font-size: 2.2rem;
     color: var(--primary-color);
@@ -1194,6 +1293,7 @@ body {
     }
 
     .kurssi h1 {
+        font-family: OtsikkoFont;
         font-size: 1.6rem;
     }
 
@@ -1224,6 +1324,7 @@ body {
 
     .kurssi h1 {
         font-size: 1.4rem;
+        font-family: OtsikkoFont;
     }
 
     .kurssi-info {
