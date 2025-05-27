@@ -32,26 +32,23 @@ include 'components/header.php';
                 </ul>
             </div>
 
-            <div class="laitteisto-info">
-                <h3>Antennit</h3>
-                <ul>
-                    <li>160m puolenaallon dipoli</li>
-                    <li>80m puolenaallon dipoli</li>
-                    <li>HF-Masto:</li>
-                </ul>
+           <div class="laitteisto-info">
+    <h3>Antennit</h3>
+    <ul>
+    <li>160m puolenaallon dipoli</li>
+    <li>80m puolenaallon dipoli</li>
+    <li>HF-Masto:</li>
+</ul>
+
+
 <ul>
-
-                <ul>
-                    
-                    <li>6-elementtinen 15m yagi</li>
-                    <li>5-elementtinen 20m yagi</li>
-                    <li>2-elementtinen kela-yagi</li>
-                    <li>3-elementtinen WARC 12/18m yagi</li>
-                    <li>5-elementtinen 10m yagi</li>
-                </ul>
-            </ul>
-            </div>
-
+    <li>6-elementtinen 15m yagi</li>
+    <li>5-elementtinen 20m yagi</li>
+    <li>2-elementtinen kela-yagi</li>
+    <li>3-elementtinen WARC 12/18m yagi</li>
+    <li>5-elementtinen 10m yagi</li>
+</ul>
+</div>
             <div class="laitteisto-info">
                 <h3>Vahvistimet</h3>
                 <ul>

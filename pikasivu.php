@@ -11,16 +11,15 @@
 
 <div class="pikasivu-container">
 
-    <!-- Vasen pikasivu-sarake -->
     <aside class="pikasivu-aside">
 
         <hr class="pikasivu-hr">
 
-        <!-- Fieldset-lohkot / Pikalinkit -->
-        <div class="pikasivu-links">
+        
+        <div class="pikasivu-links-grid">
             <div class="pikasivu-info-box">
                 <legend>OH3AC KESKUSTELUPALSTA</legend>
-                <a href="palsta/index.php">Mene tästä!</a>
+                <a href="http://www.oh3ac.fi/palsta/index.php">Mene tästä!</a>
             </div>
 
             <div class="pikasivu-info-box">
@@ -48,6 +47,7 @@
             <div class="pikasivu-info-box">
                 <legend>NETTIRADIO</legend>
                 <a href="http://websdr.org/">Websdr.org – verkko-SDR-radiot</a>
+                <a href="https://oh3ac.oh3cyt.com/">OH3AC – verkko-SDR-radio</a>
             </div>
 
             <div class="pikasivu-info-box">
@@ -57,11 +57,10 @@
         </div>
     </aside>
 
-    <?php include 'components/footer.php'; ?>
+    
 
 </div>
 
-<!-- JavaScript äänitoisto -->
-
 </body>
 </html>
+<?php include 'components/footer.php'; ?>

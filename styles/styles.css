@@ -737,6 +737,7 @@ body {
     .laitteisto ul {
         font-size: 0.9rem;
     }
+    
 }
 
 /* Jasensivu-tyyli */
@@ -1473,27 +1474,24 @@ body {
 
 
 
-/* Vasen pikasivu-sarake */
+/* ################################### PIKASIVU ################################### */
 
+.pikasivu-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    min-height: 60vh; 
+}
+
+/* Vasen pikasivu-sarake */
 .pikasivu-aside {
     width: 100%;
+    max-width: 90vw; 
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 20px;
     padding: 20px;
-}
-
-/* Karttainkki */
-.pikasivu-map {
-    text-align: center;
-}
-
-.pikasivu-centered {
-    font-size: 1.5em;
-    margin: 10px 0;
-    color: #333;
 }
 
 .pikasivu-hr {
@@ -1502,30 +1500,32 @@ body {
     margin: 20px 0;
 }
 
-/* Fieldset-lohkot / Pikalinkit */
-.pikasivu-links {
-    display: flex;
-    flex-direction: column;
+/* Grid-listaus */
+.pikasivu-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
 }
 
+/* Info-box yksittäinen */
 .pikasivu-info-box {
     background-color: #f9f9f9;
-    border: none;
     border-radius: 8px;
     padding: 20px;
-    margin-bottom: 15px;
     transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .pikasivu-info-box:hover {
     background-color: #e9e9e9;
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 .pikasivu-info-box legend {
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
 .pikasivu-info-box a {
@@ -1533,81 +1533,11 @@ body {
     color: #007bff;
     text-decoration: none;
     margin-bottom: 5px;
+    transition: color 0.3s;
 }
 
 .pikasivu-info-box a:hover {
     text-decoration: underline;
-}
-
-/* Responsiivisuus */
-
-/* Tietokone */
-@media (min-width: 1024px) {
-    .container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .pikasivu-aside {
-        width: 30%;
-        max-width: 400px;
-        margin-right: 20px;
-    }
-
-    .pikasivu-centered {
-        font-size: 1.75em;
-    }
-
-    .pikasivu-info-box {
-        padding: 25px;
-        margin-bottom: 20px;
-    }
-}
-
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .pikasivu-aside {
-        width: 45%;
-        max-width: 400px;
-        margin-right: 20px;
-    }
-
-    .pikasivu-centered {
-        font-size: 1.5em;
-    }
-
-    .pikasivu-info-box {
-        padding: 20px;
-        margin-bottom: 15px;
-    }
-}
-
-/* Mobiili */
-@media (max-width: 767px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .pikasivu-aside {
-        width: 100%;
-        max-width: 100%;
-        margin-right: 0;
-    }
-
-    .pikasivu-centered {
-        font-size: 1.25em;
-    }
-
-    .pikasivu-info-box {
-        padding: 15px;
-        margin-bottom: 10px;
-    }
 }
 
 

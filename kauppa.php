@@ -35,7 +35,7 @@
         let kaikkiTuotteet = [];
 
         
-        fetch('http://localhost:2058/products ')
+        fetch('https://oh3acvarasto.oh3cyt.com/products')
             .then(response => response.json())
             .then(data => {
                 kaikkiTuotteet = data.filter(tuote => tuote.quantity > 0);
@@ -83,7 +83,7 @@
             });
         }
 
-        // Reagoi valinnan muutokseen
+        
         valikkoelementti.addEventListener('change', näytäTuotteet);
     </script>
 </body>
