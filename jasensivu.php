@@ -28,7 +28,7 @@
             <p>Haluatko liittyä Lahden Radioamatöörikerhoon (OH3AC)? Voit tehdä sen helposti seuraavilla tavoilla:</p>
             <ol>
                 <li>Sähköposti: Lähetä viesti osoitteeseen <a href="mailto:oh3ac@oh3ac.fi">oh3ac@oh3ac.fi</a>.</li>
-                <li>Hakulomake: Lataa hakulomake koneellesi, täytä se ja lähetä se meille.</li>
+                <li>Hakulomake: Lataa <a href="pdf/jäsenhakulomake.pdf">hakulomake</a> koneellesi, täytä se ja lähetä se meille.</li>
                 <li>Kirje: Lähetä perinteinen kirje kerhon lokeroon.</li>
             </ol>
             <p>Varmista, että sisällytät viestiin seuraavat tiedot:</p>

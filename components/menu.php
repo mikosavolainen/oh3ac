@@ -23,7 +23,7 @@
     </div>
 
     <a href="jasensivu.php">Jäsensivut</a>
-    <a href="contact.php">OH3R</a>
+    <a href="oh3r.php">OH3R</a>
     <a href="galleria.php">Valokuvat</a>
 
     <button class="dropdown-btn" onclick="toggleDropdown(this)">RA-Kurssi</button>

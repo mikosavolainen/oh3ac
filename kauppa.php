@@ -4,12 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kauppa</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Kerhokirppis</title>
+    
 </head>
 <body>
     <div class="kauppa"> 
-        <h1>Kauppa</h1>
+        <h1>Kerhokirppis</h1>
+
+        <!-- Parannettu valintalaatikko -->
+        <div class="valinta-container">
+            <label for="tuotevalinta">Näytä tuotteet:</label>
+            <select id="tuotevalinta">
+                <option value="kaikki">Kaikki</option>
+                <option value="uudet">Uudet</option>
+                <option value="kaytetyt">Käytetyt</option>
+            </select>
+        </div>
 
         <section>
             <div class="kauppa-tuotteet" id="tuotteet">
@@ -21,21 +31,44 @@
     <?php include 'components/footer.php'; ?>
 
     <script>
-    fetch('https://oh3acvarasto.oh3cyt.com/products')
-        .then(response => response.json())
-        .then(data => {
+        const valikkoelementti = document.getElementById('tuotevalinta');
+        let kaikkiTuotteet = [];
+
+        
+        fetch('http://localhost:2058/products ')
+            .then(response => response.json())
+            .then(data => {
+                kaikkiTuotteet = data.filter(tuote => tuote.quantity > 0);
+                näytäTuotteet();
+            })
+            .catch(error => {
+                console.error('Virhe ladattaessa tuotteita:', error);
+                document.getElementById('tuotteet').innerHTML = 
+                    '<p>Tuotteita ei voitu ladata. Kokeile myöhemmin uudelleen. Jos ongelma toistuu, ota yhteyttä oh3ac@oh3ac.fi</p>';
+            });
+
+       
+        function näytäTuotteet() {
+            const valinta = valikkoelementti.value;
             const container = document.getElementById('tuotteet');
-            container.innerHTML = ''; 
+            container.innerHTML = '';
 
-            
-            const saatavillaOlevat = data.filter(tuote => tuote.quantity > 0);
+            let suodatetut = [];
 
-            if (saatavillaOlevat.length === 0) {
+            if (valinta === 'uudet') {
+                suodatetut = kaikkiTuotteet.filter(tuote => tuote.vanha == 0);
+            } else if (valinta === 'kaytetyt') {
+                suodatetut = kaikkiTuotteet.filter(tuote => tuote.vanha == 1);
+            } else {
+                suodatetut = kaikkiTuotteet;
+            }
+
+            if (suodatetut.length === 0) {
                 container.innerHTML = '<p>Ei tuotteita saatavilla.</p>';
                 return;
             }
 
-            saatavillaOlevat.forEach(tuote => {
+            suodatetut.forEach(tuote => {
                 const div = document.createElement('div');
                 div.className = 'kauppa-tuote';
 
@@ -43,16 +76,15 @@
                     <h3>${tuote.name}</h3>
                     <p class="kauppa-hinnoittelu">Hinta: ${tuote.price} €</p>
                     <span class="kauppa-varastossa">Saatavilla: ${tuote.quantity} kpl</span>
+                    ${tuote.vanha == 1 ? '<span class="kaytetty-tag">[KÄYTETTY]</span>' : ''}
                 `;
 
                 container.appendChild(div);
             });
-        })
-        .catch(error => {
-            console.error('Virhe ladattaessa tuotteita:', error);
-            document.getElementById('tuotteet').innerHTML = 
-                '<p>Tuotteita ei voitu ladata. Kokeile myöhemmin uudelleen. jos ongelma toistuu ota yhteyttä oh3ac@oh3ac.fi</p>';
-        });
-</script>
+        }
+
+        // Reagoi valinnan muutokseen
+        valikkoelementti.addEventListener('change', näytäTuotteet);
+    </script>
 </body>
 </html>

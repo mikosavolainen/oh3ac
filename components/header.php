@@ -6,7 +6,7 @@ include 'components/menu.php';
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="icon" href="images/Logot/oh3ac5.ico" />
+  <link rel="icon" href="images/Logot/oh3ac5.ico">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-12E7VJ916H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
