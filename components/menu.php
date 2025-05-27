@@ -34,7 +34,6 @@
     <a href="pikasivu.php">Pikasivu</a>
     <a href="kauppa.php">Myynnissä</a>
     <a href="sdr.php">Kerhon SDR</a>
-    <a href="kerhokirjeet.php">Kaikki kerhokirjeet</a>
     <a href="https://wiki.sral.fi/wiki/Etusivu" target="_blank">Radio WIKI</a>
     <a href="https://vanhat.oh3ac.fi">Arkisto</a>
 </div>
