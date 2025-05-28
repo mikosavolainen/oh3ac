@@ -77,93 +77,133 @@ body {
 }
 
 
+        
+        .index-MenucloseB {
+            width: 20px;
+            border-left: 5px solid #FFFFFF;
+            border-bottom: 5px solid #FFFFFF;
+            border-radius: 3px 0px 3px 18px;
+            background-color: #000033;
+            display: block;
+            letter-spacing: 0px;
+            text-align: center;
+            padding: 3px 12px 6px 12px;
+            text-decoration: none; 
+            color: #FFFFFF;
+            font-weight: 800;
+            font-size: 28px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 10000;
+        }
 
-.etusivu-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        .index-MenucloseB:hover {
+            border-color: #000033;
+            background-color: #eaeaea;
+            color: black;
+        }
 
-.etusivu-select-container {
-    margin-bottom: 30px;
-    text-align: center;
-}
+        
+        .index-hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
 
-#pdfValitsin {
-    padding: 12px 20px;
-    font-size: 1rem;
-    border: 2px solid var(--accent-color);
-    border-radius: 8px;
-    background-color: white;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    transition: all 0.3s ease;
-}
+        .index-h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
 
-#pdfValitsin:focus {
-    outline: none;
-    border-color: #1abc9c;
-    box-shadow: 0 0 0 2px rgba(26, 188, 156, 0.3);
-}
+        .index-cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            width: 100%;
+        }
 
-#pdfNaytin {
-    border: 2px solid var(--accent-color);
-    border-radius: 10px;
-    margin: 0 auto;
-    display: block;
-    width: 100%;
-    height: 80vh;
-    max-height: 800px;
-}
+        .index-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 90vw;
+            transition: transform 0.2s;
+        }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-    
-    #pdfValitsin {
-        padding: 10px 15px;
-        font-size: 0.9rem;
-    }
-    
-    #pdfNaytin {
-        height: 60vh;
-    }
-}
+        .index-card:hover {
+            transform: translateY(-5px);
+        }
 
-@media (min-width: 769px) {
-    
-    #pdfNaytin {
-        height: 600px;
-    }
-}
+        .index-card h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: #007BFF;
+        }
 
-/* Tablet */
-@media (min-width: 600px) and (max-width: 1024px) {
-    h1 {
-        font-size: 2.2rem;
-    }
-    
-    #pdfValitsin {
-        max-width: 500px;
-    }
-}
+        .index-card p {
+            color: #555;
+        }
 
-/* Desktop */
-@media (min-width: 1025px) {
-    h1 {
-        font-size: 2.8rem;
-    }
-    
-    #pdfValitsin {
-        max-width: 400px;
-    }
-    
-    #pdfNaytin {
-        height: 700px;
-    }
-}
+        .index-card button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .index-card button:hover {
+            background-color: #0056b3;
+        }
+
+        .index-card-list {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .index-card-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .index-moduuli-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            backdrop-filter: blur(5px);
+        }
+
+        .index-moduuli-content {
+            position: relative;
+            width: 90%;
+            height: 90%;
+            background: white;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .index-pdf-viewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
 
 
 /* ################################### SDR ###################################*/
@@ -206,7 +246,7 @@ body {
     color: #004499;
 }
 
-/* Iframe */
+
 .sdr__iframe iframe {
     width: 100%;
     height: 90vh;
@@ -215,7 +255,7 @@ body {
     margin-top: 20px;
 }
 
-/* Responsiivisuus */
+
 @media (max-width: 768px) {
     .sdr {
         padding: 15px;
@@ -285,7 +325,7 @@ body {
             .menu a { font-size: 18px; }
         }
 
-        /* Alavalikon tyylit */
+      
         .dropdown-container {
             display: none;
             padding-left: 20px;
@@ -328,7 +368,7 @@ body {
             color: #f1f1f1;
         }
 
-        /* Avattu valikon nuoli */
+        
         .dropdown-btn::after {
             content: "+";
             float: right;
@@ -396,7 +436,7 @@ body {
     opacity: 0.5;
   }
   
-  /* Glow effect (SVG filter) */
+
   .footer-sine-svg filter {
     filter: url(#glow);
   }
@@ -464,7 +504,7 @@ body {
     
   }
   
-  /* ************* Responsive ************* */
+
   
   @media (max-width: 768px) {
     .footer-content {
@@ -488,7 +528,7 @@ body {
 
 .header {
     display: flex;
-    justify-content: space-between; /* Varmistaa, että sisältö on molemmissa päissä */
+    justify-content: space-between; 
     align-items: center;
     background-image: url("/images/ylaT-BG.jpg");
     background-repeat: no-repeat;
@@ -518,8 +558,8 @@ body {
     justify-content: center;
     box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
-    /* säilytetään kulmat – ei pyöristetä */
-    border-radius: 10px; /* Voit säätää tätä esim. 0px = täyskulmainen */
+
+    border-radius: 10px; 
 }
 
 .header-reorderB:hover {
@@ -537,7 +577,7 @@ body {
 
 .header_logo {
     max-height: 80px;
-    display: block ; /* Piilotetaan oletuksena */
+    display: block ; 
 
 }
 
@@ -561,13 +601,13 @@ body {
 }
 
 
-/* Pienille näytöille (esim. mobiililaitteet) */
+
 @media (max-width: 768px) {
     .header_menu-icon {
-        display: block; /* Näytetään menu-icon */
+        display: block; 
     }
     .header_logo {
-        display: none; /* Piilotetaan logo */
+        display: none; 
     }
         .header-reorderB {
         width: 65px;
@@ -592,17 +632,17 @@ body {
 }
 
 
-/* Isommille näytöille (esim. tabletit ja tietokoneet) */
+
 @media (min-width: 769px) {
     .header_logo {
-        display: block; /* Näytetään logo */
+        display: block; 
     }
 }
 
 /* Toistin sivu */
 
 .toistimet {
-    max-width: 100%; /* Koko leveys */
+    max-width: 100%; 
     margin: 20px auto;
     padding: 20px;
     background: #fff;
@@ -648,7 +688,7 @@ body {
     border-radius: 4px;
 }
 
-/* Responsiivisuuden säilyttäminen */
+
 @media (max-width: 768px) {
     .toistimet {
         padding: 15px;
@@ -871,7 +911,7 @@ body {
 
 /* Hallitus sivun tyylitys */
 .hallitus {
-    max-width: 100%; /* Koko leveys */
+    max-width: 100%; 
     margin: 20px auto;
     padding: 20px;
     background: #fff;
